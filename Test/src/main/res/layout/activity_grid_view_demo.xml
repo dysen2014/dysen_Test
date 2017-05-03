@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_grid_view_demo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dysen.test.view.GridViewDemo"
+    android:layout_margin="8dp">
+
+
+
+        <!--
+            numColumns  每一行显示多少列
+            android:horizontalSpacing   两列之间的间距
+            android:verticalSpacing     两行之间的间距
+            -->
+        <GridView
+            android:layout_marginTop="10dp"
+            android:id="@+id/grid_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="10dp">
+
+        </GridView>
+</android.support.constraint.ConstraintLayout>

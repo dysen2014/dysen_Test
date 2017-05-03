@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dysen.test">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 震动器服务 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- 打开相机 及相册 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 连接网络权限，用于执行云端语音能力 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 读取网络信息状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取当前wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 读取手机信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 访问位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 写 权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 摄相头权限，拍照需要用到 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <application
+        android:name="com.dysen.lib.volley.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- android:name=".RevealActivity" -->
+        <activity android:name="com.dysen.lib.zbarscan.ScanCodeUtils" />
+        <activity
+            android:name=".handler.HandlerDemo"
+            android:label="@string/title_activity_handler_demo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".handler.HandlerLooper" />
+        <activity android:name=".item.ItemDemo" />
+        <activity android:name=".TestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".gps.GpsDemo" />
+        <activity android:name=".reveal.RevealActivity" />
+        <activity android:name=".person.PersonActivity" />
+
+        <service android:name=".mina.MinaService" />
+
+        <activity android:name=".mina.MinaActivity" />
+        <activity android:name=".autocomplete.AutoCompleteTxtActivity" />
+        <activity android:name=".view.ViewActivity" />
+        <activity
+            android:name=".speech.demo.IatDemo"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
+            android:screenOrientation="portrait" />
+        <activity android:name=".picker.PickerActivity" />
+        <activity android:name=".view.GridViewDemo" />
+        <activity android:name=".view.SpinnerDemo" />
+        <activity android:name=".view.ProgressBarDemo" />
+        <activity android:name=".view.WebViewDemo" />
+        <activity android:name=".view.fragment.FragmentStatic" />
+        <activity android:name=".view.fragment.FragmentDemo" />
+        <activity android:name=".view.viewpager.ViewPagerDemo" />
+        <activity android:name=".view.viewflipper.ViewFlipperDemo" />
+        <activity android:name=".view.scrollview.ScrollViewDemo" />
+        <activity android:name=".view.gallery.GalleryDemo" />
+        <activity android:name=".view.seekbar.SeekBarDemo" />
+        <activity android:name=".asynctask.AsyncTaskDemo" />
+        <activity android:name=".asynctask.ImgLoadDemo" />
+        <activity android:name=".contentprovider.ContentProviderDemo" />
+        <activity android:name=".broadcast.BroadcastDemo" />
+
+        <receiver android:name=".broadcast.MyBroadcastReceiver">
+            <intent-filter android:priority="200">
+                <action android:name="com.dysen" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcast.MyBroadcastReceiver2">
+            <intent-filter android:priority="100">
+                <action android:name="com.dysen" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".service.ServiceDemo" />
+
+        <service
+            android:name=".service.MyStartService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.MyBindService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".service.SystemServiceDemo" />
+        <activity android:name=".gesturedetector.GestureDetectorDemo" />
+        <activity android:name=".gestureoverlayview.GestureOverlayViewDemo" />
+        <activity android:name=".gesturebuilder.GestureBuilderDemo" />
+        <activity android:name=".gestureoverlayview.ViewGestures" />
+        <activity android:name=".view.panoramaImageView.PanoramaImageViewDemo" />
+        <activity android:name=".view.expand.ExpandIconViewDemo" />
+        <activity android:name=".view.animator.AnimatorDemo" />
+        <activity android:name=".view.viewpageranim.ViewPagerAnim" />
+        <activity android:name=".view.viewPagerTab.ViewPagerTab" />
+        <activity android:name=".view.fragmentTab.FragmentTab" />
+        <activity android:name=".view.snowfall.SnowfallDemo" />
+        <activity android:name=".view.recyclerView.RecyclerViewDemo"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_img_load"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dysen.test.asynctask.ImgLoadDemo">
+
+    <ImageView
+        android:id="@+id/iv_imgload"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ProgressBar
+
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="237dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_below="@+id/progressBar"
+        android:layout_toEndOf="@+id/progressBar"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="262dp">
+        <ProgressBar
+            android:id="@+id/progressBar_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:max="100"
+            android:layout_weight="4"/>
+
+            <TextView
+                android:id="@+id/txt_asynctask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <com.dysen.lib.progress.FlikerProgressBar
+        android:id="@+id/fliker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:textSize="12sp"
+        app:loadingColor="#40c4ff"
+        app:stopColor="#ff9800"/>
+    
+
+
+</RelativeLayout>

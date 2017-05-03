@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="D:\dysen\AS_Test\dysen_Test\ExpandIcon\src\main\res"/><source path="D:\dysen\AS_Test\dysen_Test\ExpandIcon\build\generated\res\rs\release"/><source path="D:\dysen\AS_Test\dysen_Test\ExpandIcon\build\generated\res\resValues\release"/></dataSet><dataSet config="release$Generated" generated="true"><source path="D:\dysen\AS_Test\dysen_Test\ExpandIcon\src\release\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="D:\dysen\AS_Test\dysen_Test\ExpandIcon\src\main\res"><file path="D:\dysen\AS_Test\dysen_Test\ExpandIcon\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="ExpandIconView">
+    <attr format="boolean" name="eiv_roundedCorners"/>
+    <attr format="boolean" name="eiv_switchColor"/>
+    <attr format="color" name="eiv_color"/>
+    <attr format="color" name="eiv_colorMore"/>
+    <attr format="color" name="eiv_colorLess"/>
+    <attr format="integer" name="eiv_animationDuration"/>
+    <attr format="dimension" name="eiv_padding"/>
+  </declare-styleable></file></source><source path="D:\dysen\AS_Test\dysen_Test\ExpandIcon\build\generated\res\rs\release"/><source path="D:\dysen\AS_Test\dysen_Test\ExpandIcon\build\generated\res\resValues\release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="D:\dysen\AS_Test\dysen_Test\ExpandIcon\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="ExpandIconView"><attr format="boolean" name="eiv_roundedCorners"/><attr format="boolean" name="eiv_switchColor"/><attr format="color" name="eiv_color"/><attr format="color" name="eiv_colorMore"/><attr format="color" name="eiv_colorLess"/><attr format="integer" name="eiv_animationDuration"/><attr format="dimension" name="eiv_padding"/></declare-styleable></configuration></mergedItems></merger>
